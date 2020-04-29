@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <title>Petbosta</title>
+  <title>PetShob</title>
 
   <!-- fontawesome -->
   <link href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="src/css/index.css">
+  <link rel="stylesheet" href="./src/css/index.css">
 
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -36,7 +36,7 @@
     <!-- Sidebar Holder -->
     <nav id="sidebar">
       <div class="sidebar-header">
-        <h3>PetBosta</h3>
+        <h3>PetShob</h3>
       </div>
 
       <form style=" display: flex;">
@@ -45,51 +45,59 @@
       </form>
 
       <ul class="list-unstyled components">
-        <p>Materia Bosta</p>
+        
+        <h4>Olá, User!</h4> <!-- when logged in-->
+        <!--<h4>Olá!</h4>--> <!-- when not logged-->
+        <li>
+          <a href="#home">Início</a>
+        </li>
+
         <li class="active">
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-          <ul class="collapse list-unstyled" id="homeSubmenu">
+          <a href="#petSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pets</a>
+          <ul class="collapse list-unstyled" id="petSubmenu">
             <li>
-              <a href="#">Home 1</a>
+              <a href="#petList">Seus Pets</a>
             </li>
             <li>
-              <a href="#">Home 2</a>
+              <a href="#agendService">Agendar Serviço</a>
             </li>
             <li>
-              <a href="#">Home 3</a>
+              <a href="#newPet">Cadastrar Pet</a>
             </li>
 
           </ul>
         </li>
+
         <li>
-          <a href="#">About</a>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-          <ul class="collapse list-unstyled" id="pageSubmenu">
+          <a href="#store">Produtos</a>
+        </li>
+
+        <li class="active">
+          <a href="#adminSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administração</a>
+          <ul class="collapse list-unstyled" id="adminSubmenu">
             <li>
-              <a href="#">Page 1</a>
+              <a href="#userList">Administrar Usuários</a>
             </li>
             <li>
-              <a href="#">Page 2</a>
+              <a href="#adminService">Administrar Serviços</a>
             </li>
             <li>
-              <a href="#">Page 3</a>
+              <a href="#adminProduct">Administrar Produtos</a>
             </li>
+
           </ul>
         </li>
+
         <li>
-          <a href="#">Portfolio</a>
+          <a href="#contact">Contato</a>
         </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
 
       <ul class="list-unstyled CTAs">
         <li>
-          <a href="#" class="download"><i class="fas fa-sign-in-alt"></i> Fazer Login</a>
+          <a href="#login" class="download"><i class="fas fa-sign-in-alt"></i> Fazer Login</a>
         </li>
         <li>
-          <a href="#" class="article"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+          <a href="#cart" class="article"><i class="fas fa-shopping-cart"></i> Carrinho</a>
         </li>
       </ul>
     </nav>
@@ -106,6 +114,8 @@
             <span></span>
           </button>
 
+          <img src="./src/img/insert_photo-black-18dp.svg" id="header-logotipo" alt="logotipo" title="Logotipo">
+
           <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -115,14 +125,21 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Seção 1</a>
+                <a class="nav-link" href="#secao1">Seção 1</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Seção 2</a>
+                <a class="nav-link" href="#secao2">Seção 2</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Seção 3</a>
+                <a class="nav-link" href="#secao3">Seção 3</a>
               </li>
+
+              <li class="nav-item">
+                <a href="#profile">
+                  <img src="./src/img/account_circle-black-18dp.svg" id="profile-icon" alt="perfil" title="Perfil">
+                </a>
+              </li>
+              
               <li class="nav-item">
                 <a href="https://api.whatsapp.com/send?phone=5511944952511&text=Olá, tenho uma dúvida e preciso de mais informações."
                   class="nav-link js-scroll-trigger" target="_blank">WhatsApp</a>
@@ -206,14 +223,8 @@
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $(this).toggleClass('active');
-      });
-    });
-  </script>
+
+  <script src="./src/js/index.js"></script>
 </body>
 
 </html>
