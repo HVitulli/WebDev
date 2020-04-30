@@ -15,5 +15,5 @@ Utilizamos a mesma estrutura de header e sidenav para todas as telas **do mock**
 
 # Grupo
 - Matheus Vinicius Gouvea de Godoi -    10295217
-- Hugo de Azevedo Vitulli          - 10295221
-- Luiz Guilherme Adorno            - 10392171
+- Hugo de Azevedo Vitulli          -    10295221
+- Luiz Guilherme Adorno            -    10392171 
