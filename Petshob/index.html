@@ -39,15 +39,12 @@
         <h3>PetShob</h3>
       </div>
 
-      <form style=" display: flex;">
-        <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-white" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-      </form>
-
       <ul class="list-unstyled components">
         
+        <img src="./src/img/account_circle-black-18dp.svg" id="profile-photo">
+
         <h4>Olá, User!</h4> <!-- when logged in-->
-        <!--<h4>Olá!</h4>--> <!-- when not logged-->
+        <h4>Olá!</h4> <!-- when not logged-->
         <li>
           <a href="#home">Início</a>
         </li>
@@ -123,29 +120,14 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#secao1">Seção 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#secao2">Seção 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#secao3">Seção 3</a>
-              </li>
+            <form style="display: flex;">
+              <input class="form-control" id="header-searchbar" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-white" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
 
-              <li class="nav-item">
-                <a href="#profile">
-                  <img src="./src/img/account_circle-black-18dp.svg" id="profile-icon" alt="perfil" title="Perfil">
-                </a>
-              </li>
-              
-              <li class="nav-item">
-                <a href="https://api.whatsapp.com/send?phone=5511944952511&text=Olá, tenho uma dúvida e preciso de mais informações."
-                  class="nav-link js-scroll-trigger" target="_blank">WhatsApp</a>
-                </a>
-              </li>
-            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5511944952511&text=Olá, tenho uma dúvida e preciso de mais informações."
+              class="nav-link js-scroll-trigger" style="padding-left: 30px;" target="_blank">WhatsApp</a>
+            </a>
           </div>
         </div>
       </nav>
