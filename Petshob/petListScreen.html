@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>PetShob</title>
+
+  <!-- fontawesome -->
+  <link href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="./src/css/petListScreen.css">
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+
+  <!-- WhatsApp html-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>PetShob</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+        
+        <img src="./src/img/account_circle-black-18dp.svg" id="profile-photo" href="#profile" alt="foto-perfil" title="Perfil">
+
+        <h4>&nbsp;Olá, User!</h4> <!-- when logged in-->
+        <h4>&nbsp;Olá!</h4> <!-- when not logged-->
+        <li>
+          <a href="#home">Início</a>
+        </li>
+
+        <li class="active">
+          <a href="#petSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pets</a>
+          <ul class="collapse list-unstyled" id="petSubmenu">
+            <li>
+              <a href="#petList">Seus Pets</a>
+            </li>
+            <li>
+              <a href="#agendService">Agendar Serviço</a>
+            </li>
+            <li>
+              <a href="#newPet">Cadastrar Pet</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <a href="#store">Produtos</a>
+        </li>
+
+        <li class="active">
+          <a href="#adminSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administração</a>
+          <ul class="collapse list-unstyled" id="adminSubmenu">
+            <li>
+              <a href="#userList">Administrar Usuários</a>
+            </li>
+            <li>
+              <a href="#adminService">Administrar Serviços</a>
+            </li>
+            <li>
+              <a href="#adminProduct">Administrar Produtos</a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <a href="#contact">Contato</a>
+        </li>
+
+      <ul class="list-unstyled CTAs">
+        <li>
+          <a href="#login" class="download"><i class="fas fa-sign-in-alt"></i> Fazer Login</a>
+        </li>
+        <li>
+          <a href="#cart" class="article"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <img src="./src/img/insert_photo-black-18dp.svg" id="header-logotipo" alt="logotipo" title="Logotipo">
+
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form style="display: flex;">
+              <input class="form-control" id="header-searchbar" type="search" placeholder="Pesquisar" aria-label="Search">
+              <button class="btn btn-outline-white" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+
+            <a href="https://api.whatsapp.com/send?phone=5511944952511&text=Olá, tenho uma dúvida e preciso de mais informações."
+              class="nav-link js-scroll-trigger" style="align-content: right;" target="_blank">WhatsApp</a>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Container for all pets and elements-->
+    <div id="pet-list-wrapper">
+        
+        <h3 style="text-align: center;">Seus Pets</h3>
+        <a class="btn btn-primary">Cadastrar Novo Pet</a><hr>
+        <!-- All client pets  -->
+        <div id="pet-list-container">
+            <div id="pet-list-pet">
+                <img src="./src/img/pets-black-18dp.svg" id="pet-list-photo" alt="Petphoto">
+                <div id="pet-list-info">
+                    <h4>Nome do Pet</h4>
+                    <p>Idade</p>
+                    <p>Raça</p>
+                </div>
+            </div>
+            <div id="pet-list-pet">
+                <img src="./src/img/pets-black-18dp.svg" id="pet-list-photo" alt="Petphoto">
+                <div id="pet-list-info">
+                    <h4>Nome do Pet</h4>
+                    <p>Idade</p>
+                    <p>Raça</p>
+                </div>
+            </div>
+            <div id="pet-list-pet">
+                <img src="./src/img/pets-black-18dp.svg" id="pet-list-photo" alt="Petphoto">
+                <div id="pet-list-info">
+                    <h4>Nome do Pet</h4>
+                    <p>Idade</p>
+                    <p>Raça</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+  <script src="./src/js/baseScreen.js"></script>
+</body>
+
+</html>
