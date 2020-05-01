@@ -207,6 +207,7 @@ a.article, a.article:hover {
 /* ---------------------------------------------------
     PET LIST
 ----------------------------------------------------- */
+
 #pet-list-container {
     min-width: 100em;
     max-width: 300em;
@@ -216,15 +217,25 @@ a.article, a.article:hover {
     flex-wrap: wrap;
 }
 
+.btn-primary {
+    background-color: #7386d5 !important;
+}
+
+.btn-secondary {
+    background-color: #d57373 !important;
+    border-color: #d84f4f !important;
+    margin-left: 80%;
+}
+
 #pet-list-pet {
     margin-left: 20px;
     margin-bottom: 15px;
     min-width: 35em;
     max-width: 45em; 
-    border-color: #555;
+    border-color: #555555;
     border-style: dashed;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #eeeeee;
     padding-left: 10px;
     display: inline-flex;
 }
