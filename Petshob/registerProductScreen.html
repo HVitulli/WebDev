@@ -23,7 +23,16 @@
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
     integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-    crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
+	
+	
+	<!-- Filepond stylesheet -->
+	<script
+		src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+		rel="stylesheet">
 
   <!-- WhatsApp html-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -131,71 +140,51 @@
             <a href="https://api.whatsapp.com/send?phone=5511944952511&text=Olá, tenho uma dúvida e preciso de mais informações."
               class="nav-link js-scroll-trigger" style="align-content: right;" target="_blank">WhatsApp</a>
             </a>
-
-            <a href="#registerUserScreen">Cadastrar</a>
           </div>
         </div>
-      </nav>
+	  </nav>
+	  
 
-      <!-- Seção1 -->
-      <section>
-        <div class="container">
-          <h2>Seção1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-
-          <div class="line"></div>
-        </div>
-      </section>
-
-      <!-- Seção2 -->
-      <section>
-        <div class="container">
-          <h2>Seção2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-
-          <div class="line"></div>
-        </div>
-      </section>
-
-      <!-- Seção3 -->
-      <section>
-        <div class="container">
-          <h2>Seção3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-
-          <div class="line"></div>
-        </div>
-      </section>
-
+	  <div class="container-login100 bg-light">
+		<article class="card-body mx-auto" style="max-width: 400px;">
+			<h4 class="card-title mt-3 text-center">Registrar Produto</h4>
+			<form>
+				<p class="card-title mt-3 text-center">Imagem de perfil do produto</p>
+				<div style="text-align: center;">
+					<!-- We'll transform this input into a pond -->
+					<input class="form-content" type="file" accept="image/*" data-type='image' required>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fas fa-search"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Nome do Produto" type="text" required>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fas fa-keyboard"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Descrição" type="text" required>
+				</div> <!-- form-group// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fas fa-money-bill-wave"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Preço" type="text" required>
+				</div> <!-- form-group end.// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fas fa-cubes"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Quantidade em Estoque" type="number" required>
+				</div> <!-- form-group end.// -->
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block"> Registrar </button>
+				</div> <!-- form-group// -->
+			</form>
+		</article>
+	</div> <!-- card.// -->
     </div>
-  </div>
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -208,10 +197,27 @@
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
+	
+	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
 
+	<script>
+		FilePond.registerPlugin(
+			FilePondPluginFileValidateType,
+			FilePondPluginImagePreview,
+			FilePondPluginImageResize,
+			FilePondPluginImageTransform);
 
-  <script src="./src/js/baseScreen.js"></script>
+			const inputElement = document.querySelector('input[type="file"]');
+        const pond = FilePond.create(inputElement, {
+            acceptedFileTypes: ['image/*',],
+            imageResizeTargetWidth: 256,
+		});
+	</script>
+	
 </body>
 
 </html>

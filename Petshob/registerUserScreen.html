@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Petshob</title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+	<!-- Our Custom CSS -->
+	<link rel="stylesheet" href="./src/css/registerUserScreen.css">
+
+
+	<!-- Filepond stylesheet -->
+	<script
+		src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-login100 bg-light">
+		<article class="card-body mx-auto" style="max-width: 400px;">
+			<h4 class="card-title mt-3 text-center">Crie uma conta</h4>
+			<form>
+				<p class="card-title mt-3 text-center">Imagem de Perfil</p>
+				<div style="text-align: center;">
+					<!-- We'll transform this input into a pond -->
+					<input class="form-content" type="file" accept="image/*" data-type='image' required>
+				</div>
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-user"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Nome completo" type="text" required>
+				</div> <!-- form-group// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Email" type="email" required>
+				</div> <!-- form-group// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Telefone" type="number" required>
+				</div> <!-- form-group// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-building"></i> </span>
+					</div>
+					<input name="" class="form-control" placeholder="Endereço" type="text" required>
+				</div> <!-- form-group end.// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+					</div>
+					<input class="form-control" placeholder="Senha" type="password" required>
+				</div> <!-- form-group// -->
+				<div class="form-group input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+					</div>
+					<input class="form-control" placeholder="Repetir senha" type="password" required>
+				</div> <!-- form-group// -->
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block"> Registrar </button>
+				</div> <!-- form-group// -->
+				<p class="text-center">Já é cadastrado? <a href="">logar</a> </p>
+			</form>
+		</article>
+	</div> <!-- card.// -->
+
+	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+	<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+
+	<script>
+		FilePond.registerPlugin(
+			FilePondPluginFileValidateType,
+			FilePondPluginImagePreview,
+			FilePondPluginImageResize,
+			FilePondPluginImageTransform);
+
+			const inputElement = document.querySelector('input[type="file"]');
+        const pond = FilePond.create(inputElement, {
+            acceptedFileTypes: ['image/*',],
+            imageResizeTargetWidth: 256,
+		});
+	</script>
+</body>
+
+</html>
