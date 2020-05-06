@@ -166,6 +166,35 @@ a.article, a.article:hover {
 }
 
 /* ---------------------------------------------------
+    CART CONTENT STYLE
+----------------------------------------------------- */
+.cart-list-container {
+    justify-content: center;
+}
+
+#cart-list-product {
+    border-style: dashed;
+
+}
+
+.cart-list-photo {
+    float: left;
+    height: 100px;
+    padding-right: 10px;
+}
+
+.btn-remove {
+    float: right;
+    background-color: #d57373;
+    border-color: #d84f4f;
+    margin-left: 80%;
+}
+
+.btn-buy {
+    background-color: #7386d5;
+}
+
+/* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
@@ -209,50 +238,6 @@ a.article, a.article:hover {
     margin: 5px auto;
 }
 
-/* ---------------------------------------------------
-    PET LIST
------------------------------------------------------ */
-
-#pet-list-container {
-    min-width: 100em;
-    max-width: 300em;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.btn-primary {
-    background-color: #7386d5 !important;
-}
-
-.btn-secondary {
-    background-color: #d57373 !important;
-    border-color: #d84f4f !important;
-    margin-left: 80%;
-}
-
-#pet-list-pet {
-    margin-left: 20px;
-    margin-bottom: 15px;
-    min-width: 35em;
-    max-width: 45em; 
-    border-color: #555555;
-    border-style: dashed;
-    border-radius: 10px;
-    background-color: #eeeeee;
-    padding-left: 10px;
-    display: inline-flex;
-}
-
-#pet-list-photo {
-    width: 15em;
-    height: 15em;
-}
-
-#pet-list-info {
-    margin: auto;
-}
 
 /* ---------------------------------------------------
     MEDIAQUERIES

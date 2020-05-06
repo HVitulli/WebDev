@@ -20,7 +20,7 @@ Matheus Vinicius - 10295217
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="./src/css/baseScreen.css">
+  <link rel="stylesheet" href="./src/css/cartScreen.css">
 
   <!-- Font Awesome JS -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -28,16 +28,7 @@ Matheus Vinicius - 10295217
     crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
     integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
-	crossorigin="anonymous"></script>
-	
-	
-	<!-- Filepond stylesheet -->
-	<script
-		src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
-	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-	<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
-	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
-		rel="stylesheet">
+    crossorigin="anonymous"></script>
 
   <!-- WhatsApp html-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -145,51 +136,53 @@ Matheus Vinicius - 10295217
             <a href="https://api.whatsapp.com/send?phone=5511944952511&text=Olá, tenho uma dúvida e preciso de mais informações."
               class="nav-link js-scroll-trigger" style="align-content: right;" target="_blank">WhatsApp</a>
             </a>
+
+            <a href="#registerUserScreen">Cadastrar</a>
           </div>
         </div>
-	  </nav>
-	  
+      </nav>
 
-	  <div class="container-login100 bg-light">
-		<article class="card-body mx-auto" style="max-width: 400px;">
-			<h4 class="card-title mt-3 text-center">Registrar Produto</h4>
-			<form>
-				<p class="card-title mt-3 text-center">Imagem de perfil do produto</p>
-				<div style="text-align: center;">
-					<!-- We'll transform this input into a pond -->
-					<input class="form-content" type="file" accept="image/*" data-type='image' required>
-				</div>
-				<div class="form-group input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text"> <i class="fas fa-search"></i> </span>
-					</div>
-					<input name="" class="form-control" placeholder="Nome do Produto" type="text" required>
-        </div> <!-- form-group// -->
-        <div class="form-group input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text"> <i class="fas fa-keyboard"></i> </span>
-					</div>
-					<input name="" class="form-control" placeholder="Descrição" type="text" required>
-				</div> <!-- form-group// -->
-				<div class="form-group input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text"> <i class="fas fa-money-bill-wave"></i> </span>
-					</div>
-					<input name="" class="form-control" placeholder="Preço" type="text" required>
-				</div> <!-- form-group end.// -->
-				<div class="form-group input-group">
-					<div class="input-group-prepend">
-						<span class="input-group-text"> <i class="fas fa-cubes"></i> </span>
-					</div>
-					<input name="" class="form-control" placeholder="Quantidade em Estoque" type="number" required>
-				</div> <!-- form-group end.// -->
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary btn-block"> Registrar </button>
-				</div> <!-- form-group// -->
-			</form>
-		</article>
-	</div> <!-- card.// -->
+        <h3 style="text-align: center; vertical-align: middle;">Seu Carrinho</h3><hr>
+        <div id="cart-list-container">
+            <!-- All client products  -->
+            <div id="cart-list-container">
+                <div id="cart-list-product">
+                    <img src="./src/img/local_mall-black-18dp.svg" class="cart-list-photo" alt="cartphoto">
+                    <div id="cart-list-info">
+                        <h4>Nome</h4>
+                        <p>Preço</p>
+                        <p>Quantidade</p>
+                    </div>
+                    <a class="btn btn-remove">Remover Produto</a>
+                </div>
+                <br><br>
+                <div id="cart-list-product">
+                    <img src="./src/img/local_mall-black-18dp.svg" class="cart-list-photo" alt="cartphoto">
+                    <div id="cart-list-info">
+                        <h4>Nome</h4>
+                        <p>Preço</p>
+                        <p>Quantidade</p>
+                    </div>
+                    <a class="btn btn-remove">Remover Produto</a>
+                </div>
+                <br><br>
+                <div id="cart-list-product">
+                    <img src="./src/img/local_mall-black-18dp.svg" class="cart-list-photo" alt="cartphoto">
+                    <div id="cart-list-info">
+                        <h4>Nome</h4>
+                        <p>Preço</p>
+                        <p>Quantidade</p>
+                    </div>
+                    <a class="btn btn-remove">Remover Produto</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+
+        <h4>Total: R$ 9.876,54</h4>
+        <a class="btn btn-buy">Finalizar Compra</a>
     </div>
+  </div>
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -202,27 +195,10 @@ Matheus Vinicius - 10295217
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-	crossorigin="anonymous"></script>
-	
-	<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
-	<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-	<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
-	<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+    crossorigin="anonymous"></script>
 
-	<script>
-		FilePond.registerPlugin(
-			FilePondPluginFileValidateType,
-			FilePondPluginImagePreview,
-			FilePondPluginImageResize,
-			FilePondPluginImageTransform);
 
-			const inputElement = document.querySelector('input[type="file"]');
-        const pond = FilePond.create(inputElement, {
-            acceptedFileTypes: ['image/*',],
-            imageResizeTargetWidth: 256,
-		});
-	</script>
-	
+  <script src="./src/js/baseScreen.js"></script>
 </body>
 
 </html>
